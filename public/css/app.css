@@ -5,10 +5,9 @@
     box-sizing: border-box;
 }
 body {
-font-family: roboto,sans-serif;
+font-family: "Raleway",sans-serif;
 height: 100vh;
 }
-
 .center{
   position: absolute;
   top: 50%;
@@ -26,33 +25,32 @@ outline: none;
 cursor: pointer;
 border-radius: 5px;
 }
-.popup, .popup_login{
+.popup{
   position: absolute;
   top: -150%;
   left: 50%;
   opacity: 0;
+  transform: translate(-50%,-50%) scale(1.25);
   width: 380px;
   padding: 20px 30px;
   background: #fff;
   box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  transform: translate(-50%,-50%) scale(0.9);
-  transition: top 0ms ease-in 200ms,
-              opacity 200ms ease-in 0ms,
-              transform 400ms ease-in 0ms;
+  transition: top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 20ms ease-in-out 0ms;
                           
   
 }
-.popup.active, .popup_login.active{
+.popup.active {
   top: 50%;
   opacity: 1;
   transform: translate(-50%,-50%) scale(1);
   transition: top 0ms ease-in-out 0,
               opacity 200ms ease-in-out 0ms,
-              transform 200ms ease-in-out 0ms;
+              transform 20ms ease-in-out 0ms;
 }
-.popup > .close-btn,
-.popup_login > .close-btn{
+.popup .close-btn{
   position: absolute;
   top: 10px;
   right: 10px;
@@ -65,27 +63,21 @@ border-radius: 5px;
   border-radius: 15px;
   cursor: pointer;
 }
-.popup > .form > h2,
-.popup_login > .form > h2{
+.popup .form h2{
 text-align: center;
 color: #222;
 margin: 10px 0px 20px;
 font-size: 25px;
 }
-.popup > .form > .form-element,
-.popup_login > .form > .form-element{
+.popup .form .form-element{
   margin: 15px 0px;
 }
-.popup > .form > .form-element > label,
-.popup_login > .form > .form-element > label{
+.popup .form .form-element label{
   font-size: 14px;
   color: #222;
 }
-.popup > .form > .form-element > input[type="text"],
-.popup > .form > .form-element > input[type="password"],
-.popup_login > .form > .form-element > input[type="text"],
-.popup_login > .form > .form-element > input[type="password"]
-{
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"]{
   margin-top: 5px;
   display: block;
   width: 100%;
@@ -94,12 +86,10 @@ font-size: 25px;
   border: 1px solid #aaa;
   border-radius: 5px;
 }
-.popup >.form > .form-element > input[type="checkbox"],
-.popup_login > .form > .form-element > input[type="checkbox"]{
+.popup .form .form-element input[type="checkbox"]{
   margin-right: 5px;
 }
-.popup > .form > .form-element > button,
-.popup_login > .form > .form-element > button{
+.popup .form .form-element button{
   width: 100%;
   height: 40px;
   border: none;
@@ -110,8 +100,7 @@ font-size: 25px;
   border-radius: 10px;
   cursor: pointer;
 }
-.popup > .form > .form-element > a
-.popup_login > .form > .form-element > a {
+.popup .form .form-element a {
   display: block;
   text-align: right;
   font-size: 15px;
@@ -138,7 +127,7 @@ nav ul{
     display: inline-block;
     list-style-type: none;
 }
-nav > ul > li{
+nav ul li{
     display: inline-block;
     margin-right: 20px;
 }
@@ -146,86 +135,90 @@ a{
     text-decoration: none;
     color: #555;
 }
-
 .welcome{
-  background-image: url("/images/la1.jpg");
+  background-image: url(/images/la1.jpg?f763878af77e80d75a8e740d22fbd5d6);
   background-size: cover;
-  background-position-y: -245px;
-  height: 92vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.welcome > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgba(149, 148, 148, 0.342);
-  width: 80%;
-  height: 500px;
-  border-radius: 5px;
+  
+*{
+    margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
 }
+body {
+font-family: "Raleway",sans-serif;
+height: 100vh;
+}
+.navbar{
+    background-color: rgba(200,200,200,0.1);
+}
+ul > svg {
+    background-color: rgb(122, 122, 122);
+    border-radius: 40px;
+    padding: 7px;
+}
+ul > li {
+    padding-bottom: 10px;
+}
+ /* Dropdown Button */
+ .dropbtn {
+    background-color: #f1f1f1;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #f1f1f1;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;} 
 
-.welcome > div > p {
-  font-size: 50px;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 100px;
-}
-.welcome > div > button{
-  width: 200px;
-  height: 50px;
-  font-size: 25px;
-  color: #fff;
-  background-color: tomato;
-  border: none;
-  border-radius: 5px;
-}
-
-.service{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 75%;
-  margin: 100px auto;
-}
-
-.service {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: center;
-  gap: 60px;
-}
-
-.s1, .s2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
-}
-
-.s1 > div > h1, .s2 > div >h1 {
-  margin-bottom: 15px;
-}
-
-.s1 > div > p, .s2 > div > p {
-  font-size: 18px;
-}
-
-.s_svg{
-  width: 500Px;
-  display: block;
-  margin: 0 auto;
-}
-
-.exp{
-  height: 600px;
-}
-
+  .formulaire{
+      padding-left: 90px;
+      padding-top: 20px;
+  }
+  .formulaire > input {
+      padding-right: 182px;
+  }
+  .formulaire > p{
+      margin-top: 20px;
+  }
 .c_h1{
-  margin: 180px 0 40px 220px;
+  margin: 60px 0 40px 220px;
   font-size: 40px;
 }
 
