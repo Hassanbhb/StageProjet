@@ -1,131 +1,94 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Voyage</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compte</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
 </head>
-
-<body> 
-            <div class="navbar">
-            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="200.000000pt" height="200.000000pt" viewBox="0 0 200.000000 200.000000"
- preserveAspectRatio="xMidYMid meet">
-
-<g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
-<path d="M541 1749 c0 -8 11 -41 24 -74 20 -51 25 -57 31 -37 3 12 8 22 10 22
-5 0 307 -309 339 -348 l28 -34 -154 -154 c-121 -121 -159 -154 -180 -154 -34
-0 -59 -26 -32 -33 11 -3 5 -5 -13 -6 -44 -2 -61 -22 -32 -38 22 -12 22 -12 -8
--13 -17 0 -37 -7 -44 -15 -10 -12 -10 -15 4 -15 24 0 20 -13 -19 -50 -36 -35
--45 -60 -22 -60 7 0 26 13 42 30 15 16 32 27 37 24 14 -9 38 16 38 40 0 14 3
-17 8 9 9 -14 82 56 82 78 0 8 72 86 161 174 l161 160 157 -163 c133 -137 157
--167 153 -188 -4 -23 12 -54 29 -54 4 0 10 10 12 23 3 17 5 16 6 -8 2 -33 31
--82 31 -53 0 9 4 19 9 22 4 3 6 -6 3 -19 -4 -25 12 -55 29 -55 5 0 9 10 9 23
-1 19 5 17 39 -20 38 -43 61 -54 61 -31 0 7 -15 27 -32 46 -23 24 -29 36 -20
-39 21 8 -6 33 -37 34 -14 0 -20 3 -13 6 10 4 9 9 -4 24 -9 10 -20 16 -25 14
--4 -3 -10 -1 -14 5 -3 5 -1 10 6 10 8 0 8 4 -1 15 -7 8 -20 15 -29 15 -14 0
--198 180 -311 303 l-34 37 194 195 195 195 12 -27 c11 -26 12 -27 19 -8 4 11
-16 42 26 69 10 27 17 50 15 53 -5 4 -118 -37 -132 -49 -5 -5 -2 -8 8 -8 9 0
-17 -3 17 -8 0 -4 -86 -93 -191 -197 l-190 -190 -184 190 c-180 186 -183 190
--159 201 25 10 24 11 -28 31 -29 12 -61 24 -70 28 -12 5 -18 3 -17 -6z"/>
-<path d="M1071 1737 c-60 -30 -94 -83 -99 -158 -3 -33 -10 -64 -18 -70 -8 -6
--14 -19 -14 -27 0 -11 9 -7 33 15 17 17 46 34 62 37 73 16 143 135 120 205 -8
-27 -29 26 -84 -2z m37 -26 c-7 -12 -18 -21 -24 -21 -6 0 -14 -14 -18 -31 -5
--27 -8 -30 -21 -19 -13 11 -15 9 -15 -13 0 -13 -9 -35 -21 -48 l-20 -24 6 40
-c9 56 34 93 80 120 44 27 52 26 33 -4z m16 -46 c-7 -41 -62 -105 -89 -105 -17
-0 -17 1 0 20 10 11 27 20 38 20 16 0 17 3 7 15 -14 16 -5 35 16 35 8 0 14 6
-13 13 -3 15 12 50 18 43 2 -2 1 -20 -3 -41z"/>
-<path d="M1382 1448 c-48 -61 -55 -136 -16 -167 36 -28 58 -26 83 5 28 35 27
-51 -9 107 -16 26 -30 52 -30 57 0 14 -16 12 -28 -2z m38 -63 c24 -39 23 -83
--2 -99 -22 -14 -58 18 -58 51 0 22 25 83 34 83 3 0 14 -16 26 -35z"/>
-<path d="M1449 1231 l-44 -39 -42 25 c-58 34 -79 24 -24 -12 l43 -29 -31 -25
-c-54 -45 -33 -58 24 -16 l33 26 46 -23 c25 -12 49 -18 53 -14 5 5 4 10 -2 12
--5 2 -25 13 -43 24 l-32 20 40 36 c39 35 50 54 31 54 -5 0 -29 -18 -52 -39z"/>
-<path d="M860 976 c-5 -13 -18 -27 -29 -31 -12 -3 -21 -11 -21 -16 0 -12 27
--11 52 2 14 8 23 8 31 0 15 -15 70 -14 85 1 9 9 17 9 36 -2 15 -7 36 -10 53
--6 35 9 51 9 86 0 32 -8 38 11 6 21 -11 4 -25 18 -31 31 -12 27 -28 32 -28 9
-0 -8 -11 -22 -24 -30 -30 -20 -66 -6 -66 25 0 11 -7 20 -15 20 -8 0 -15 -6
--15 -13 0 -8 -9 -22 -20 -32 -18 -17 -21 -17 -45 -1 -14 9 -25 23 -25 31 0 24
--20 17 -30 -9z"/>
-<path d="M604 655 c-24 -37 -9 -74 39 -100 22 -12 37 -27 37 -39 0 -16 -6 -18
--46 -13 -42 4 -45 3 -42 -17 4 -31 88 -36 117 -7 37 37 19 87 -39 111 -19 8
--30 20 -30 32 0 16 6 19 38 16 31 -2 37 0 37 17 0 17 -8 20 -47 23 -41 3 -49
-0 -64 -23z"/>
-<path d="M778 570 l-36 -110 24 0 c17 0 25 7 30 25 5 21 12 25 45 25 33 0 41
--4 49 -25 9 -23 50 -37 50 -17 0 4 -15 53 -33 107 -32 94 -35 100 -63 103 -29
-3 -30 2 -66 -108z m86 8 c6 -25 4 -28 -19 -28 -29 0 -29 1 -14 55 12 42 17 39
-33 -27z"/>
-<path d="M970 570 l0 -110 25 0 c23 0 25 4 25 45 0 45 0 45 35 45 24 0 35 5
-35 15 0 10 -11 15 -35 15 -32 0 -35 2 -35 30 0 28 2 30 40 30 33 0 40 3 40 20
-0 18 -7 20 -65 20 l-65 0 0 -110z"/>
-<path d="M1140 570 c0 -103 1 -110 20 -110 19 0 20 7 20 110 0 103 -1 110 -20
-110 -19 0 -20 -7 -20 -110z"/>
-<path d="M1240 570 c0 -103 1 -110 20 -110 17 0 20 7 20 40 0 53 22 53 52 0
-16 -28 30 -40 46 -40 28 0 28 2 -4 50 -25 38 -26 41 -10 58 9 10 16 33 16 50
-0 41 -31 62 -92 62 l-48 0 0 -110z m96 55 c8 -20 -13 -45 -37 -45 -14 0 -19 7
--19 30 0 25 4 30 25 30 14 0 28 -7 31 -15z"/>
-</g>
-</svg>
-                <nav class="menu">
-                    <ul>
-                        
-                    <div class="dropdown">
-          
-          <svg onclick="myFunction()" class="dropbtn" width="160" height="70" viewBox="0 0 82 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M59.875 9.375C58.3298 9.375 56.8194 9.8332 55.5346 10.6916C54.2499 11.5501 53.2485 12.7702 52.6572 14.1978C52.0659 15.6253 51.9112 17.1962 52.2126 18.7116C52.5141 20.2271 53.2581 21.6192 54.3507 22.7118C55.4433 23.8044 56.8354 24.5484 58.3509 24.8499C59.8663 25.1513 61.4372 24.9966 62.8647 24.4053C64.2923 23.814 65.5124 22.8127 66.3709 21.5279C67.2293 20.2431 67.6875 18.7327 67.6875 17.1875C67.6875 15.1155 66.8644 13.1284 65.3993 11.6632C63.9341 10.1981 61.947 9.375 59.875 9.375Z" fill="#333333"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1.15385 12C0.847827 12 0.554342 12.1229 0.337954 12.3417C0.121566 12.5605 0 12.8572 0 13.1667C0 13.4761 0.121566 13.7728 0.337954 13.9916C0.554342 14.2104 0.847827 14.3333 1.15385 14.3333H28.8462C29.1522 14.3333 29.4457 14.2104 29.662 13.9916C29.8784 13.7728 30 13.4761 30 13.1667C30 12.8572 29.8784 12.5605 29.662 12.3417C29.4457 12.1229 29.1522 12 28.8462 12H1.15385ZM0 22.5C0 22.1906 0.121566 21.8938 0.337954 21.675C0.554342 21.4562 0.847827 21.3333 1.15385 21.3333H28.8462C29.1522 21.3333 29.4457 21.4562 29.662 21.675C29.8784 21.8938 30 22.1906 30 22.5C30 22.8094 29.8784 23.1062 29.662 23.325C29.4457 23.5437 29.1522 23.6667 28.8462 23.6667H1.15385C0.847827 23.6667 0.554342 23.5437 0.337954 23.325C0.121566 23.1062 0 22.8094 0 22.5V22.5ZM0 31.8333C0 31.5239 0.121566 31.2272 0.337954 31.0084C0.554342 30.7896 0.847827 30.6667 1.15385 30.6667H28.8462C29.1522 30.6667 29.4457 30.7896 29.662 31.0084C29.8784 31.2272 30 31.5239 30 31.8333C30 32.1428 29.8784 32.4395 29.662 32.6583C29.4457 32.8771 29.1522 33 28.8462 33H1.15385C0.847827 33 0.554342 32.8771 0.337954 32.6583C0.121566 32.4395 0 32.1428 0 31.8333V31.8333Z" fill="#333333"/>
-<path d="M59.875 0C55.5485 0 51.3192 1.28295 47.7219 3.6866C44.1246 6.09026 41.3208 9.50667 39.6651 13.5038C38.0095 17.5009 37.5763 21.8993 38.4203 26.1426C39.2644 30.3859 41.3478 34.2837 44.407 37.343C47.4663 40.4022 51.3641 42.4856 55.6074 43.3297C59.8507 44.1737 64.2491 43.7405 68.2462 42.0849C72.2433 40.4292 75.6598 37.6254 78.0634 34.0281C80.4671 30.4308 81.75 26.2015 81.75 21.875C81.7434 16.0754 79.4366 10.5153 75.3357 6.41435C71.2347 2.31342 65.6746 0.00661675 59.875 0V0ZM72.3625 35.8219C72.3314 33.7724 71.4964 31.8172 70.0374 30.3775C68.5784 28.9378 66.6122 28.1289 64.5625 28.125H55.1875C53.1378 28.1289 51.1716 28.9378 49.7126 30.3775C48.2537 31.8172 47.4186 33.7724 47.3875 35.8219C44.554 33.2918 42.5558 29.9607 41.6576 26.2698C40.7593 22.5788 41.0033 18.7021 42.3573 15.1529C43.7112 11.6037 46.1113 8.54948 49.2397 6.39464C52.368 4.23979 56.0771 3.08598 59.8758 3.08598C63.6745 3.08598 67.3836 4.23979 70.5119 6.39464C73.6403 8.54948 76.0404 11.6037 77.3943 15.1529C78.7483 18.7021 78.9923 22.5788 78.094 26.2698C77.1957 29.9607 75.1976 33.2918 72.3641 35.8219H72.3625Z" fill="#333333"/>
-</svg>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#">Voyages</a>
-    <a href="#">Favoris</a>
-    <a href="/cree">Créer une expériance</a>
-    <a href="#">Compte</a>
-    <a href="#">Déconexion</a>
-  </div>
-</div> 
-                    </ul>
-                </nav>
-            </div>
-          <div class="formulaire">
-              <b><h2>Proposez votre expérience</h2></b><br/>
-              <p>Dans quelle ville voulez-vous organiser votre expérience ?</p><br/>
-              <input type="text">
-              <p>Dans quelle proposerez-vous votre expérience ?</p><br/>
-              <select>
-                  <option>Arabic</option>
-                  <option>English</option>
-                  <option>Spanish</option>
-              </select>
+<body>
+  <div class="navbar">
+    <img src={{asset("images/logo.svg")}} alt="justalogo" class="logo"> 
+    <nav class="menu">
+      <ul>
+        <div class="dropdown">
+          <img src={{asset("images/account-icon.svg")}} alt="account" onclick="myFunction()" class="dropbtn">
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Voyages</a>
+            <a href="#">Favoris</a>
+            <a href="/cree">Créer une expériance</a>
+            <a href="#">Compte</a>
+            <a href="#">Déconexion</a>
           </div>
-<script>
-   /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+        </div>
+      </ul>
+    </nav>
+  </div>
+    <form action="post">
+      <div class="formulaire">
+        <div class="countainer">
+          <img src={{asset("images/user-avatar.svg")}} alt="usericon" class="user_icon"> 
+          <input type="file" name="file" id="file" class="inputfile" />
+          <label for="file"><p style="margin-top: 47px;margin-left: 8px;"><u>Changer photo de profil</u></p></label>
+        </div>
+      </div>
+      <div class="compte">
+          <div>
+            <label>Prénom</label><br/>
+            <input type="text">
+          </div>
+          <div>
+            <label>Nom</label><br/>
+            <input type="text">
+          </div>
+          <div>
+            <label>Adresse e-mail</label><br/>
+            <input type="email" placeholder="example@gmail.com">
+          </div>
+          <div>
+            <label>Sexe</label><br/>
+            <select>
+              <option>Homme</option>
+              <option>Femme</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div>
+            <label>Date de naissance</label><br/>
+            <input type="date">
+          </div>
+          <div>
+            <label>Numéro de telephone</label><br/>
+            <input type="tel" placeholder="(+212)123456789">
+          </div>
+    </div>
+    <input id="sv_btn" type="submit" value="Enregister">
+  </form>
+    
 
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+  <script>
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
       }
     }
-  }
-} 
-</script>
+  </script>
 
 </body>
 
