@@ -11,7 +11,23 @@
         <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
     </head>
     <body>
-        
+        <div class="navbar">
+            <img src={{asset("images/logo.svg")}} alt="justalogo" class="logo"> 
+            <nav class="menu">
+              <ul>
+                <div class="dropdown">
+                  <img src={{asset("images/account-icon.svg")}} alt="account" onclick="myFunction()" class="dropbtn">
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Voyages</a>
+                    <a href="#">Favoris</a>
+                    <a href="/cree">Créer une expériance</a>
+                    <a href="#">Compte</a>
+                    <a href="#">Déconexion</a>
+                  </div>
+                </div>
+              </ul>
+            </nav>
+          </div>
         <h1 class="c_h1">Proposez votre expérience</h1>
         <div class="c_form">
             <form  action="">
@@ -244,6 +260,26 @@
             </form>
         </div>
         
-        <script src=""></script>
+        <script>
+   /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+</script>
     </body>
 </html>

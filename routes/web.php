@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('acceuil');
 });
+Route::get('/account', function () {
+    return view('account');
+});
+Route::get('/cree', function () {
+    return view('cree');
+});
