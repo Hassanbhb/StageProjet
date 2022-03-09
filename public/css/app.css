@@ -304,11 +304,7 @@ height: 100vh;
     padding-top: 15px;
     padding-bottom: 10px;
 }
-ul > svg {
-    background-color: rgb(122, 122, 122);
-    border-radius: 40px;
-    padding: 7px;
-}
+
 ul > li {
     padding-bottom: 10px;
 }
