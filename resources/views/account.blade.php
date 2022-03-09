@@ -12,7 +12,6 @@
   <div class="navbar">
     <img src={{asset("images/logo.svg")}} alt="justalogo" class="logo"> 
     <nav class="menu">
-      <ul>
         <div class="dropdown">
           <img src={{asset("images/account-icon.svg")}} alt="account" onclick="myFunction()" class="dropbtn">
           <div id="myDropdown" class="dropdown-content">
@@ -23,7 +22,6 @@
             <a href="#">Déconexion</a>
           </div>
         </div>
-      </ul>
     </nav>
   </div>
     <form action="post">
