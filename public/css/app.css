@@ -148,7 +148,7 @@ a{
 }
 
 .welcome{
-  background-image: url(/images/la1.jpg?4a35685946e8803fde02629f8b293b3d);
+  background-image: url("/images/la1.jpg");
   background-size: cover;
   background-position-y: -245px;
   height: 92vh;
@@ -191,10 +191,27 @@ a{
   margin: 100px auto;
 }
 
-.service > div{
+.service {
   display: grid;
+  grid-template-columns: 1fr;
   align-content: center;
   gap: 60px;
+}
+
+.s1, .s2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.s1 > div > h1, .s2 > div >h1 {
+  margin-bottom: 15px;
+}
+
+.s1 > div > p, .s2 > div > p {
+  font-size: 18px;
 }
 
 .s_svg{
@@ -203,10 +220,8 @@ a{
   margin: 0 auto;
 }
 
-
-
-.voyage{
-  height: 100px;
+.exp{
+  height: 600px;
 }
 
 .c_h1{
