@@ -3,23 +3,6 @@ body {
     height: 100vh;
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.navbar button {
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--white);
-    background: var(--red);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
 .popup,
 .popup_login {
     position: absolute;
@@ -51,7 +34,7 @@ body {
     width: 15px;
     height: 15px;
     background-color: #888;
-    color: #eee;
+    color: var(--white);
     text-align: center;
     line-height: 15px;
     border-radius: 15px;
@@ -60,7 +43,7 @@ body {
 .popup > .form > h2,
 .popup_login > .form > h2 {
     text-align: center;
-    color: #222;
+    color: var(--dblue);
     margin: 10px 0px 20px;
     font-size: 25px;
 }
@@ -102,28 +85,42 @@ body {
     cursor: pointer;
 }
 
-.navbar {
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
+.ac_nav {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
     align-items: center;
 }
-nav {
-    flex: 1;
-    text-align: right;
+
+.ac_nav > img {
+    width: 80px;
+    margin-top: 10px;
 }
-nav ul {
-    display: inline-block;
-    list-style-type: none;
+
+.ac_nav > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
-nav > ul > li {
-    display: inline-block;
-    margin-right: 20px;
+
+.ac_nav > ul > li {
+    list-style: none;
 }
-a {
+
+.ac_nav > ul > li > a {
     text-decoration: none;
-    color: #555;
+    color: var(--dblue);
+}
+
+.ac_nav > ul > li > button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--red);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .welcome {
@@ -264,6 +261,11 @@ a {
     grid-area: logo;
     align-self: center;
 }
+
+.big_logo > img {
+    width: 175px;
+}
+
 .apps {
     grid-area: apps;
     align-self: center;
@@ -282,20 +284,20 @@ footer {
     grid-template-areas:
         "logo apps"
         "copyright copyright";
-    height: 200px;
+    height: 170px;
 }
 
-*{
-    margin: 0;  
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-font-family: "Raleway",sans-serif;
-height: 100vh;
+    font-family: "Raleway", sans-serif;
+    height: 100vh;
 }
-.navbar{
-    background-color: rgba(200,200,200,0.1);
+.navbar {
+    background-color: rgba(200, 200, 200, 0.1);
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -304,16 +306,9 @@ height: 100vh;
     padding-top: 15px;
     padding-bottom: 10px;
 }
-ul > svg {
-    background-color: rgb(122, 122, 122);
-    border-radius: 40px;
-    padding: 7px;
-}
-ul > li {
-    padding-bottom: 10px;
-}
- /* Dropdown Button */
- .dropbtn {
+
+/* Dropdown Button */
+.dropbtn {
     color: white;
     padding-right: 25px;
     padding-left: 25px;
@@ -325,116 +320,122 @@ ul > li {
     height: 68px;
     border: 2px solid #f1f1f1;
     border-radius: 50px;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
     background-color: #f1f1f1;
-  }
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: -5.667px;
     bottom: -228.4px;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: center;
-  }
-  
-  /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;} 
+}
 
-  .formulaire{
-      padding-left: 210px;
-      padding-top: 80px;
-      display: flex;
-      -webkit-user-select: none;
-         -moz-user-select: none;
-          -ms-user-select: none;
-              user-select: none;
-  }
-  .formulaire > p {
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+
+.formulaire {
+    padding-left: 210px;
+    padding-top: 80px;
+    display: flex;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+.formulaire > p {
     padding-top: 49px;
     padding-left: 21px;
-  }
-  .user_icon {
+}
+.user_icon {
     height: 75px;
     width: 62px;
     padding-top: 18px;
     margin-top: 10px;
-  }
-  .logo{
+}
+.logo {
     height: 80px;
     width: 173px;
-  }
-  .inputfile {
+}
+.inputfile {
     width: 0.1px;
     height: 0.1px;
     opacity: 0;
     overflow: hidden;
     position: absolute;
     z-index: -1;
-  }
-  .compte {
+}
+.compte {
     padding-top: 49px;
     padding-left: 210px;
-  }
-  .compte > form > input{
+}
+.compte > form > input {
     margin-top: 10px;
     margin-bottom: 25px;
-  }
-  .countainer {
+}
+.countainer {
     display: grid;
     grid-template-columns: 1fr 3fr;
-  }
-  .compte {
+}
+.compte {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-  }
-  .compte > div > input{
-   margin-top: 17px;
-   padding-top: 3px;
-   padding-bottom: 3px;
-  }
-  .compte > div > select{
+}
+.compte > div > input {
     margin-top: 17px;
     padding-top: 3px;
     padding-bottom: 3px;
-   }
-   #sv_btn{
-      width: 200px;
-      height: 50px;
-      display: block;
-      margin: 50px auto;
-      background-color: black;
-      color: #fff;
-      border: none;
-   }
-   #sv_btn:hover{
-     cursor: pointer;
-   }
+}
+.compte > div > select {
+    margin-top: 17px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+#sv_btn {
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 50px auto;
+    background-color: black;
+    color: #fff;
+    border: none;
+}
+#sv_btn:hover {
+    cursor: pointer;
+}
+
 .c_h1{
   margin: 60px 0 40px 220px;
   font-size: 40px;
@@ -525,15 +526,17 @@ input, select, textarea  {
   color: #fff;
   border: none;
 }
-*{
-  font-family: roboto, sans-serif, serif;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+* {
+    font-family: roboto, sans-serif, serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: var(--dblue);
 }
 
-:root{
-  --red: #F50057;
-  --white: #f5f5f5;
+:root {
+    --red: #f50057;
+    --white: #f5f5f5;
+    --dblue: #2f2e41;
 }
 
