@@ -3,6 +3,13 @@
   font-family: roboto, sans-serif, serif;
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
+
+:root{
+  --red: #F50057;
+  --white: #f5f5f5;
+}
+
 @import url(./acceuil.css);
 @import url(./cree_page.css);
