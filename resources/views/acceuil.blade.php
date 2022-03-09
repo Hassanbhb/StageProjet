@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Voyage</title>
+        <title>Safir with us</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -13,23 +13,16 @@
     </head>
 
     <body>
-        <div class="header">
-            <div class="container">
-                <div class="navbar">
-                    <a href="http://127.0.0.1:8000/"><img src="/img/logo.png" alt="logo" width="90px"></a>
-                    <nav>
-                        <ul>
-                            <li><a href="">Acceuil</a></li>
-                            <li><a href="">Service</a></li>
-                            <li><a href="">Contact</a></li>
-
-                            <li><button id="show-register">Inscription</button></li>
-
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
+        <nav class="ac_nav">
+            <img src={{ asset('images/logo.svg') }} alt="logo">
+            <ul>
+                <li><a href="">Acceuil</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">Contact</a></li>
+                <li><button id="show-register">Inscription</button></li>
+            </ul>
+        </nav>    
+        
         <div class="popup">
             <div class="close-btn">×</div>
             <div class="form">
@@ -149,7 +142,7 @@
 
         <footer>
             <div class="big_logo">
-                <img src="#" alt="logo">
+                <img src={{ asset('images/logo.svg') }} alt="logo">
             </div>
             <div class="apps">
                 <p>Télécharger notre app sur Android et ios</p>
