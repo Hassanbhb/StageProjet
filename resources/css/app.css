@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap');
-*{
-  font-family: roboto, sans-serif, serif;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap");
+* {
+    font-family: roboto, sans-serif, serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: var(--dblue);
 }
 
-:root{
-  --red: #F50057;
-  --white: #f5f5f5;
+:root {
+    --red: #f50057;
+    --white: #f5f5f5;
+    --dblue: #2f2e41;
 }
 
 @import url(./acceuil.css);
