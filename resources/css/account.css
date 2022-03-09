@@ -14,11 +14,7 @@ body {
     padding-top: 15px;
     padding-bottom: 10px;
 }
-ul > svg {
-    background-color: rgb(122, 122, 122);
-    border-radius: 40px;
-    padding: 7px;
-}
+
 ul > li {
     padding-bottom: 10px;
 }
@@ -130,11 +126,6 @@ ul > li {
     padding-top: 3px;
     padding-bottom: 3px;
 }
-.compte > div > select {
-    margin-top: 17px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
 #sv_btn {
     width: 200px;
     height: 50px;
@@ -145,5 +136,8 @@ ul > li {
     border: none;
 }
 #sv_btn:hover {
+    cursor: pointer;
+}
+.countainer > label > p:hover {
     cursor: pointer;
 }
