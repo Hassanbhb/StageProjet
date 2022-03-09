@@ -2,23 +2,6 @@ body {
     height: 100vh;
 }
 
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.navbar button {
-    padding: 10px 20px;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--white);
-    background: var(--red);
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
 .popup,
 .popup_login {
     position: absolute;
@@ -50,7 +33,7 @@ body {
     width: 15px;
     height: 15px;
     background-color: #888;
-    color: #eee;
+    color: var(--white);
     text-align: center;
     line-height: 15px;
     border-radius: 15px;
@@ -59,7 +42,7 @@ body {
 .popup > .form > h2,
 .popup_login > .form > h2 {
     text-align: center;
-    color: #222;
+    color: var(--dblue);
     margin: 10px 0px 20px;
     font-size: 25px;
 }
@@ -101,28 +84,42 @@ body {
     cursor: pointer;
 }
 
-.navbar {
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
+.ac_nav {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
     align-items: center;
 }
-nav {
-    flex: 1;
-    text-align: right;
+
+.ac_nav > img {
+    width: 80px;
+    margin-top: 10px;
 }
-nav ul {
-    display: inline-block;
-    list-style-type: none;
+
+.ac_nav > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
-nav > ul > li {
-    display: inline-block;
-    margin-right: 20px;
+
+.ac_nav > ul > li {
+    list-style: none;
 }
-a {
+
+.ac_nav > ul > li > a {
     text-decoration: none;
-    color: #555;
+    color: var(--dblue);
+}
+
+.ac_nav > ul > li > button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--red);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .welcome {
@@ -263,6 +260,11 @@ a {
     grid-area: logo;
     align-self: center;
 }
+
+.big_logo > img {
+    width: 175px;
+}
+
 .apps {
     grid-area: apps;
     align-self: center;
@@ -281,5 +283,5 @@ footer {
     grid-template-areas:
         "logo apps"
         "copyright copyright";
-    height: 200px;
+    height: 170px;
 }
