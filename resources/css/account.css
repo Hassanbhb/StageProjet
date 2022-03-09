@@ -142,3 +142,6 @@ ul > li {
    #sv_btn:hover{
      cursor: pointer;
    }
+   .countainer > label > p:hover{
+     cursor: pointer;
+   }
