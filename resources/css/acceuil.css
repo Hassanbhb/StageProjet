@@ -1,224 +1,285 @@
-*{
-    margin: 0;  
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
-font-family: roboto,sans-serif;
-height: 100vh;
+    height: 100vh;
 }
 
-.center{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.navbar button{
-padding: 10px 20px;
-font-size: 15px;
-font-weight: 600;
-color: #222;
-background: red;
-border: none;
-outline: none;
-cursor: pointer;
-border-radius: 5px;
+.navbar button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--red);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
 }
-.popup, .popup_login{
-  position: absolute;
-  top: -150%;
-  left: 50%;
-  opacity: 0;
-  width: 380px;
-  padding: 20px 30px;
-  background: #fff;
-  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
-  transform: translate(-50%,-50%) scale(0.9);
-  transition: top 0ms ease-in 200ms,
-              opacity 200ms ease-in 0ms,
-              transform 400ms ease-in 0ms;
-                          
-  
+.popup,
+.popup_login {
+    position: absolute;
+    top: -150%;
+    left: 50%;
+    opacity: 0;
+    width: 380px;
+    padding: 20px 30px;
+    background: #fff;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transform: translate(-50%, -50%) scale(0.9);
+    transition: top 0ms ease-in 200ms, opacity 200ms ease-in 0ms,
+        transform 400ms ease-in 0ms;
 }
-.popup.active, .popup_login.active{
-  top: 50%;
-  opacity: 1;
-  transform: translate(-50%,-50%) scale(1);
-  transition: top 0ms ease-in-out 0,
-              opacity 200ms ease-in-out 0ms,
-              transform 200ms ease-in-out 0ms;
+.popup.active,
+.popup_login.active {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition: top 0ms ease-in-out 0, opacity 200ms ease-in-out 0ms,
+        transform 200ms ease-in-out 0ms;
 }
 .popup > .close-btn,
-.popup_login > .close-btn{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 15px;
-  height: 15px;
-  background-color: #888;
-  color: #eee;
-  text-align: center;
-  line-height: 15px;
-  border-radius: 15px;
-  cursor: pointer;
+.popup_login > .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
 }
 .popup > .form > h2,
-.popup_login > .form > h2{
-text-align: center;
-color: #222;
-margin: 10px 0px 20px;
-font-size: 25px;
+.popup_login > .form > h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
 }
 .popup > .form > .form-element,
-.popup_login > .form > .form-element{
-  margin: 15px 0px;
+.popup_login > .form > .form-element {
+    margin: 15px 0px;
 }
 .popup > .form > .form-element > label,
-.popup_login > .form > .form-element > label{
-  font-size: 14px;
-  color: #222;
+.popup_login > .form > .form-element > label {
+    font-size: 14px;
+    color: #222;
 }
 .popup > .form > .form-element > input[type="text"],
 .popup > .form > .form-element > input[type="password"],
 .popup_login > .form > .form-element > input[type="text"],
-.popup_login > .form > .form-element > input[type="password"]
-{
-  margin-top: 5px;
-  display: block;
-  width: 100%;
-  padding: 10px;
-  outline: none;
-  border: 1px solid #aaa;
-  border-radius: 5px;
+.popup_login > .form > .form-element > input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
 }
-.popup >.form > .form-element > input[type="checkbox"],
-.popup_login > .form > .form-element > input[type="checkbox"]{
-  margin-right: 5px;
+.popup > .form > .form-element > input[type="checkbox"],
+.popup_login > .form > .form-element > input[type="checkbox"] {
+    margin-right: 5px;
 }
 .popup > .form > .form-element > button,
-.popup_login > .form > .form-element > button{
-  width: 100%;
-  height: 40px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-  background: #222;
-  color: #f5f5f5;
-  border-radius: 10px;
-  cursor: pointer;
+.popup_login > .form > .form-element > button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #222;
+    color: var(--white);
+    border-radius: 10px;
+    cursor: pointer;
 }
-.popup > .form > .form-element > a
-.popup_login > .form > .form-element > a {
-  display: block;
-  text-align: right;
-  font-size: 15px;
-  color: 1a79ca;
-  text-decoration: none; 
-  font-weight: 600;
-  display: inline;
-}
-.navbar {
-font-size: 15px;
-display: flex;
-align-items: center;
-padding: 20px;
-align-items: center;
 
+.navbar {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    align-items: center;
 }
-nav{
+nav {
     flex: 1;
     text-align: right;
-    
-
 }
-nav ul{
+nav ul {
     display: inline-block;
     list-style-type: none;
 }
-nav > ul > li{
+nav > ul > li {
     display: inline-block;
     margin-right: 20px;
 }
-a{
+a {
     text-decoration: none;
     color: #555;
 }
 
-.welcome{
-  background-image: url("/images/la1.jpg");
-  background-size: cover;
-  background-position-y: -245px;
-  height: 92vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.welcome {
+    background-image: url("/images/la1.jpg");
+    background-size: cover;
+    background-position-y: -245px;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .welcome > div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgba(149, 148, 148, 0.342);
-  width: 80%;
-  height: 500px;
-  border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(149, 148, 148, 0.342);
+    width: 80%;
+    height: 500px;
+    border-radius: 5px;
 }
 
 .welcome > div > p {
-  font-size: 50px;
-  font-weight: 500;
-  color: #fff;
-  margin-bottom: 100px;
+    font-size: 50px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 100px;
 }
-.welcome > div > button{
-  width: 200px;
-  height: 50px;
-  font-size: 25px;
-  color: #fff;
-  background-color: tomato;
-  border: none;
-  border-radius: 5px;
-}
-
-.service{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 75%;
-  margin: 100px auto;
+.welcome > div > button {
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    color: var(--white);
+    background-color: var(--red);
+    border: none;
+    border-radius: 5px;
 }
 
 .service {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: center;
-  gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: center;
+    gap: 60px;
+    width: 75%;
+    margin: 100px auto;
 }
 
-.s1, .s2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
+.s1,
+.s2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
 }
 
-.s1 > div > h1, .s2 > div >h1 {
-  margin-bottom: 15px;
+.s1 > div > h1,
+.s2 > div > h1 {
+    margin-bottom: 15px;
 }
 
-.s1 > div > p, .s2 > div > p {
-  font-size: 18px;
+.s1 > div > p,
+.s2 > div > p {
+    font-size: 18px;
 }
 
-.s_svg{
-  width: 500Px;
-  display: block;
-  margin: 0 auto;
+.s_svg {
+    width: 500px;
+    display: block;
+    margin: 0 auto;
 }
 
-.exp{
-  height: 600px;
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+    width: 75%;
+    margin: 50px auto;
+}
+
+.stats > .card {
+    padding: 50px 0;
+}
+
+.stats > .card > .head {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.stats > .card > .label {
+    font-size: 30px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    align-items: center;
+    width: 75%;
+    margin: 70px auto;
+}
+
+.con_info {
+    height: 340px;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.map {
+    justify-self: end;
+}
+
+.con_info > .head {
+    font-size: 30px;
+}
+
+.con_info > a {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.con_info > p > span {
+    font-weight: bold;
+}
+
+.con_logo {
+    fill: var(--red);
+}
+
+.big_logo {
+    grid-area: logo;
+    align-self: center;
+}
+.apps {
+    grid-area: apps;
+    align-self: center;
+    justify-self: end;
+}
+.copyright {
+    grid-area: copyright;
+    align-self: center;
+    justify-self: center;
+}
+
+footer {
+    width: 75%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas:
+        "logo apps"
+        "copyright copyright";
+    height: 200px;
 }
