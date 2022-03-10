@@ -16,7 +16,6 @@ class ExperienceController extends Controller
 
         return view('voyages', ['exp' => $data]);
     }
-
     public function show($id)
     {
         return view('details', ['id' => $id]);
