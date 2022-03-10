@@ -539,6 +539,88 @@ textarea {
     border: none;
 }
 
+.v_type_list {
+    margin: 50px 50px;
+}
+
+.v_type_list > ul > li {
+    display: inline;
+    font-size: 24px;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 5px 5px 0 0;
+}
+
+.v_type_list > ul > li:hover {
+    background-color: var(--red);
+    color: var(--white);
+    transition-duration: 0.3s;
+}
+
+.v_type_list > ul > .active {
+    box-shadow: 0 4px var(--red);
+}
+
+.voyages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 200px;
+    width: 75%;
+    margin: 0 auto;
+}
+.card {
+    width: 100%;
+}
+
+.card > img {
+    width: 380px;
+    height: 380px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15px;
+}
+
+.card > .head > span,
+.card > .info > span {
+    text-align: end;
+}
+
+.card > .head {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.card > .head > p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.card > .head > span {
+    font-size: 20px;
+}
+
+.card > .info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.card > .info > div {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+}
+
+.card > .info > span {
+    font-weight: 300;
+}
+
+.card > .info > span {
+    font-weight: 300;
+}
+
 * {
     font-family: roboto, sans-serif, serif;
     margin: 0px;

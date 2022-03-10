@@ -14,7 +14,7 @@
       <div class="dropdown">
         <img src={{asset("images/account-icon.svg")}} alt="account" onclick="myFunction()" class="dropbtn">
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Voyages</a>
+          <a href="/voyages">Voyages</a>
           <a href="#">Favoris</a>
           <a href="/cree">Créer une expériance</a>
           <a href="/account">Compte</a>
@@ -24,6 +24,28 @@
     </div>
 
     @yield('content')
+
+    <script>
+      /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                  var openDropdown = dropdowns[i];
+                  if (openDropdown.classList.contains('show')) {
+                      openDropdown.classList.remove('show');
+                  }
+              }
+          }
+      } 
+    </script>
 
   </body>
 </html>
