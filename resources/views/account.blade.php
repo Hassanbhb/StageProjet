@@ -9,21 +9,7 @@
   <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
 </head>
 <body>
-  <div class="navbar">
-    <img src={{asset("images/logo.svg")}} alt="justalogo" class="logo"> 
-    <nav class="menu">
-        <div class="dropdown">
-          <img src={{asset("images/account-icon.svg")}} alt="account" onclick="myFunction()" class="dropbtn">
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#">Voyages</a>
-            <a href="#">Favoris</a>
-            <a href="/cree">Créer une expériance</a>
-            <a href="#">Compte</a>
-            <a href="#">Déconexion</a>
-          </div>
-        </div>
-    </nav>
-  </div>
+    @include('subviews.usernav')
     <form action="post">
       <div class="formulaire">
         <div class="countainer">
