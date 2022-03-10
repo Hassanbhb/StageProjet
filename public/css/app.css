@@ -442,96 +442,103 @@ footer {
     cursor: pointer;
 }
 
-.c_h1{
-  margin: 60px 0 40px 220px;
-  font-size: 40px;
+.c_h1 {
+    margin: 60px 0 40px 220px;
+    font-size: 40px;
 }
 
-.c_form{
-  font-size: 22px;
-  display: flex;
+.c_form {
+    font-size: 22px;
+    display: flex;
 }
 
-.c_form > form{
-  margin: auto;
-  width: 1240px;
+.c_form > form {
+    margin: auto;
+    width: 1240px;
 }
 
-input, select, textarea  {
-  font-size: 18px;
-  border: 1px solid black;
-  border-radius: 5px;
+input,
+select,
+textarea {
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
-.c_f_lang, .c_f_area, .c_f_titre, .c_f_photo{
-  margin-top: 40px;
+.c_f_lang,
+.c_f_area,
+.c_f_titre,
+.c_f_photo {
+    margin-top: 40px;
 }
 
-.c_f_ville > input, .c_f_titre > div >input{
-  margin-top: 20px;
-  width: 460px;
-  height: 45px;
-  padding-left: 20px;
+.c_f_ville > input,
+.c_f_titre > div > input {
+    margin-top: 20px;
+    width: 460px;
+    height: 45px;
+    padding-left: 20px;
 }
 
 .c_f_lang {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
-.c_f_lang > div > select{
-  margin-top: 20px;
-  width: 460px;
-  height: 45px;
-  padding-left: 20px;
+.c_f_lang > div > select {
+    margin-top: 20px;
+    width: 460px;
+    height: 45px;
+    padding-left: 20px;
 }
 
 .c_f_area > p {
-  font-weight: lighter;
-  font-size: 14px;
-  margin: 20px 0;
+    font-weight: lighter;
+    font-size: 14px;
+    margin: 20px 0;
 }
 
-.c_f_area > textarea{
-  width: 460px;
-  padding: 20px;
+.c_f_area > textarea {
+    width: 460px;
+    padding: 20px;
 }
 
-.c_f_titre{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.c_f_titre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .c_f_photo > label > span {
-  font-size: 14px;
-  color: red;
+    font-size: 14px;
+    color: red;
 }
 
-.c_f_photo > input{
-  margin-top: 20px;
+.c_f_photo > input {
+    margin-top: 20px;
 }
 
-.c_f_prix{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-top: 40px;
+.c_f_prix {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 40px;
 }
 
-.c_f_prix > div > input[type="number"]{
-  margin-top: 20px;
-  padding: 10px;
-  width: 460px;
+.c_f_prix > div > input[type="number"] {
+    margin-top: 20px;
+    padding: 10px;
+    width: 460px;
 }
 
-#sb_btn{
-  width: 200px;
-  height: 50px;
-  display: block;
-  margin: 50px auto;
-  background-color: tomato;
-  color: #fff;
-  border: none;
+#sb_btn {
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: 50px auto;
+    background-color: tomato;
+    color: #fff;
+    border: none;
 }
+
 * {
     font-family: roboto, sans-serif, serif;
     margin: 0px;
