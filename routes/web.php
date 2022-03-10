@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExperienceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +18,9 @@ Route::get('/', function () {
     return view('acceuil');
 });
 
-Route::get('/voyages', function(){
-    return view('voyages');
-});
+Route::get('/voyages', [ExperienceController::class, 'index']);
+
+Route::get('/voyages/{id}', [ExperienceController::class, 'show']);
 
 Route::get('/account', function () {
     return view('account');
