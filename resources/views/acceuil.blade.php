@@ -10,15 +10,18 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href={{ URL::asset('css/app.css') }}>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+        <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+        
     </head>
 
     <body>
         <nav class="ac_nav">
             <img src={{ asset('images/logo.svg') }} alt="logo">
             <ul>
-                <li><a href="">Acceuil</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="/">Acceuil</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li><button id="show-register">Inscription</button></li>
             </ul>
         </nav>    
@@ -81,13 +84,13 @@
                 </div>
             </div>
         </div>
-        <div class="welcome">
+        <div class="welcome" id="welcome">
             <div>
                 <p>Laissez-vous guider par votre curiosité</p>
                 <button>Explorez</button>
             </div>
         </div>
-        <div class="service">
+        <div class="service" id="service">
             <div class="s1">
                 <div>
                     <h1>Crée votre voyage</h1>
@@ -128,14 +131,14 @@
 
         </div>
 
-        <div class="contact">
+        <div class="contact" id="contact">
             <div class="con_info">
                 <span class="head">Contacter nous:</span>
                 <p><span>E-mail:</span> safir@gmail.com</p>
                 <p><span>Tél:</span> 06-73-34-32-05</p>
-                <a href="#"><img src={{ asset('images/face_logo.svg') }} alt="facebook logo"> Facebook</a>
-                <a href="#"><img src={{ asset('images/twitter_logo.svg') }} alt="twitter logo"> Twitter</a>
-                <a href="#"><img src={{ asset('images/insta_logo.svg') }} alt="instagram logo"> Instagram</a>
+                <a href="#" id="socials"><img src={{ asset('images/face_logo.svg') }} alt="facebook logo"> Facebook</a>
+                <a href="#" id="socials"><img src={{ asset('images/twitter_logo.svg') }} alt="twitter logo"> Twitter</a>
+                <a href="#" id="socials"><img src={{ asset('images/insta_logo.svg') }} alt="instagram logo"> Instagram</a>
             </div>
             <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215.0539107956635!2d-9.546908077789043!3d30.411640739983817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b7da61b863c9%3A0x1134028ed4dab469!2sUnivers%20Startup%20et%20Entrepreneur%20-%20Incubateur%20et%20Espace%20Coworking%20Agadir!5e0!3m2!1sen!2sma!4v1646823925991!5m2!1sen!2sma&z=5" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
@@ -147,8 +150,8 @@
             <div class="apps">
                 <p>Télécharger notre app sur Android et ios</p>
                 <div>
-                    <img src={{ asset("images/google_play.svg") }} alt="google play button">
-                    <img src={{ asset("images/ios_store.svg") }} alt="apple store button">
+                    <a href="https://drive.google.com/uc?export=download&id=1Frda7fnLd8qsrzktBLIqH5Dnqf1Pye92"><img src={{ asset("images/google_play.svg") }} alt="google play button"></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1RTH-SXbdglOl_DNigLD3vl6-Q-Af8rSX"><img src={{ asset("images/ios_store.svg") }} alt="apple store button"></a>
                 </div>
             </div>
 
@@ -177,6 +180,8 @@
                 })
             });
         </script>
+        
+
     </body>
 
 </html>

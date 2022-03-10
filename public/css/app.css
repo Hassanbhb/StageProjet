@@ -1,11 +1,14 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap);
+html {
+    scroll-behavior: smooth;
+  }
 body {
     height: 100vh;
 }
 
 .popup,
 .popup_login {
-    position: absolute;
+    position: fixed;
     top: -150%;
     left: 50%;
     opacity: 0;
@@ -17,6 +20,10 @@ body {
     transform: translate(-50%, -50%) scale(0.9);
     transition: top 0ms ease-in 200ms, opacity 200ms ease-in 0ms,
         transform 400ms ease-in 0ms;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 .popup.active,
 .popup_login.active {
@@ -89,6 +96,10 @@ body {
     display: grid;
     grid-template-columns: 4fr 1fr;
     align-items: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .ac_nav > img {
@@ -131,6 +142,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .welcome > div {
@@ -167,6 +182,10 @@ body {
     gap: 60px;
     width: 75%;
     margin: 100px auto;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .s1,
@@ -193,7 +212,12 @@ body {
     display: block;
     margin: 0 auto;
 }
-
+.exp{
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
 .stats {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -285,6 +309,10 @@ footer {
         "logo apps"
         "copyright copyright";
     height: 170px;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .navbar {
