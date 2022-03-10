@@ -28,53 +28,53 @@
     width: 75%;
     margin: 0 auto;
 }
-.card {
+.voyages > .card {
     width: 100%;
 }
 
-.card > img {
+.voyages > .card > img {
     width: 380px;
     height: 380px;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.card > .head > span,
-.card > .info > span {
+.voyages > .card > .head > span,
+.voyages > .card > .info > span {
     text-align: end;
 }
 
-.card > .head {
+.voyages > .card > .head {
     margin: 10px 0;
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-.card > .head > p {
+.voyages > .card > .head > p {
     font-size: 20px;
     font-weight: 500;
 }
 
-.card > .head > span {
+.voyages > .card > .head > span {
     font-size: 20px;
 }
 
-.card > .info {
+.voyages > .card > .info {
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
 }
 
-.card > .info > div {
+.voyages > .card > .info > div {
     display: grid;
     grid-template-columns: 1fr 8fr;
     align-items: center;
 }
 
-.card > .info > span {
+.voyages > .card > .info > span {
     font-weight: 300;
 }
 
-.card > .info > span {
+.voyages > .card > .info > span {
     font-weight: 300;
 }
