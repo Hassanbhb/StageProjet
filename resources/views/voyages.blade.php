@@ -1,7 +1,6 @@
 @extends('layout.layout')
 
 @section('content')
-
 <div>
   <div class="v_type_list">
     <ul>

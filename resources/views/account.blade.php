@@ -1,7 +1,14 @@
   @extends('layout.layout')
   
   @section('content')
-  
+  <div>
+    @if (Session::has('success'))
+        <div style="text-align: center;border: 2px black solid;width: 30%;margin-left: 550px;">
+            <label>&#9888; Status :</label>
+           {{ Session::get('success') }}
+        </div>
+    @endif
+  </div>  
   <form action="post">
     <div class="formulaire">
       <div class="countainer">

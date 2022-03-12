@@ -24,27 +24,28 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="show-register">Inscription</button></li>
             </ul>
-        </nav>    
-        
+        </nav>  
+        <form action="{{route('store')}}" method="POST">
         <div class="popup">
             <div class="close-btn">×</div>
             <div class="form">
+                @csrf
                 <h2>Inscription</h2>
                 <div class="form-element">
                     <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Entrer votre email">
+                    <input type="text" id="email" name="mail" placeholder="Entrer votre email" required>
                 </div>
                 <div class="form-element">
                     <label for="username">Nom d'utilisateur</label>
-                    <input type="text" id="username" placeholder="Entrer votre nom d'utilisateur">
+                    <input type="text" id="username" name="usname" placeholder="Entrer votre nom d'utilisateur" required>
                 </div>
                 <div class="form-element">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" placeholder="Entrer votre mot de passe">
+                    <input type="password" id="password" name="pw" placeholder="Entrer votre mot de passe" required>
                 </div>
                 <div class="form-element">
                     <label for="confirm-password">Confirmer le mot de passe</label>
-                    <input type="password" id="password" placeholder="Confirmer votre mot de passe">
+                    <input type="password" id="password" name="conpw" placeholder="Confirmer votre mot de passe" required>
                 </div>
                 <div class="form-element">
                     <input type="checkbox" id="remember-me">
@@ -55,35 +56,39 @@
                 </div>
 
                 <div class="form-element">
-                    <button style="margin-bottom: 23px" id="show-login">Déja Inscrit?</button>
+                    <button type="button" style="margin-bottom: 23px" id="show-login">Déja Inscrit?</button>
                     <a href="#" style="padding-left: 94px;">Mot passe oublié?</a>
                 </div>
             </div>
         </div>
+    </form>
+    <form action="{{route('login.check')}}" method="POST">
         <div class="popup_login">
             <div class="close-btn">×</div>
             <div class="form">
+                @csrf
                 <h2>Connexion</h2>
                 <div class="form-element">
                     <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Entrer votre email">
+                    <input type="text" id="email" placeholder="Entrer votre email" required>
                 </div>
                 <div class="form-element">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" placeholder="Entrer votre mot de passe">
+                    <input type="password" id="password" placeholder="Entrer votre mot de passe" required>
                 </div>
                 <div class="form-element">
                     <input type="checkbox" id="remember-me">
                     <label for="remember-me">Remember me</label>
                 </div>
                 <div class="form-element">
-                    <button>Connexion</button>
+                    <button type="submit">Connexion</button>
                 </div>
                 <div class="form-element">
                     <a href="#">Mot passe oublié?</a>
                 </div>
             </div>
         </div>
+    </form>
         <div class="welcome" id="welcome">
             <div>
                 <p>Laissez-vous guider par votre curiosité</p>
