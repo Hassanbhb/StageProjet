@@ -3,7 +3,7 @@
 @section('content')
 
 <div>
-  <h1>details page</h1>
+  <h1> {{ $exp->titre }} </h1>
 </div>
 
 @endsection
