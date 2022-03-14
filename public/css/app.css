@@ -543,21 +543,26 @@ textarea {
     margin: 50px 50px;
 }
 
-.v_type_list > ul > li {
+.v_type_list > form > ul > li {
     display: inline;
-    font-size: 24px;
+}
+
+.v_type_list > form > ul > li > input {
     padding: 6px 15px;
-    cursor: pointer;
+    font-size: 24px;
+    border: none;
     border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    background-color: white;
 }
 
-.v_type_list > ul > li:hover {
-    background-color: var(--red);
+.v_type_list > form > ul > li > input:hover {
+    transition: 0.5s;
     color: var(--white);
-    transition-duration: 0.3s;
+    background-color: var(--red);
 }
 
-.v_type_list > ul > .active {
+.v_type_list > form > ul > li > input.active {
     box-shadow: 0 4px var(--red);
 }
 
