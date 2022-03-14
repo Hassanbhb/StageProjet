@@ -3,21 +3,37 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Models\Experience;
 
 class ExperienceController extends Controller
 {
     public function index()
     {
-        $data = [
-            ['name' => 'Quad a marrakech', 'prix' => 300, 'rating' => 4.5, 'duree' => '1 jour', 'type' => 'sport'],
-            ['name' => 'Musée Agadir', 'prix' => 120, 'rating' => 3.2, 'duree' => '4 heurs', 'type' => 'art et culture'],
-            ['name' => 'Camp a paradise', 'prix' => 600, 'rating' => 4, 'duree' => '4 jours', 'type' => 'nature et plain air']
-        ];
+        $experiences = Experience::all();
 
-        return view('voyages', ['exp' => $data]);
+        return view('voyages', ['exps' => $experiences]);
     }
+
+    public function filter(Request $req)
+    {
+        $filtered_theme = strtolower($req->input('filter'));
+        if ($filtered_theme == 'all') {
+            return redirect('/voyages');
+        }
+        $experiences = Experience::all()->where('theme', '=', $filtered_theme);
+        return view('voyages', ['exps' => $experiences]);
+    }
+
     public function show($id)
     {
-        return view('details', ['id' => $id]);
+        $exp = Experience::findOrFail($id);
+
+        return view('details', ['exp' => $exp]);
+    }
+
+    public function create()
+    {
+        return view("cree");
     }
 }
