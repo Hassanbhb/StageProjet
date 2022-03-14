@@ -13,18 +13,18 @@ class CreateExperienceTable extends Migration
      */
     public function up()
     {
-        Schema::create('experience', function (Blueprint $table) {
+        Schema::create('experiences', function (Blueprint $table) {
             $table->id();
             $table->string('langue');
             $table->string('ville');
             $table->string('theme');
-            $table->string('description');
+            $table->longText('description');
             $table->string('duree');
             $table->string('titre');
             $table->json('images');
             $table->json('inclus');
             $table->integer('prix');
-            $table->integer('rating');
+            $table->float('rating');
             $table->timestamps();
         });
     }
