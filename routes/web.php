@@ -19,8 +19,10 @@ Route::get('/', function () {
 });
 
 Route::get('/voyages', [ExperienceController::class, 'index']);
-
+Route::post('/voyages', [ExperienceController::class, 'filter']);
+Route::get('/voyages/cree', [ExperienceController::class, 'create']);
 Route::get('/voyages/{id}', [ExperienceController::class, 'show']);
+
 
 Route::get('/account', function () {
     return view('account');
