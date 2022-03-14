@@ -24,8 +24,18 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="show-register">Inscription</button></li>
             </ul>
-        </nav>  
-        <form action="{{route('store')}}" method="POST">
+        </nav>
+        @if(Session::has('success'))
+        <div class="div" style="text-align: center;border: 2px black solid;width: 30%;margin-left: 550px;">
+            &#9888; {{Session::get('success')}}
+        </div>
+        @endif
+        @if(Session::has('fail'))
+        <div class="div" style="text-align: center;border: 2px black solid;width: 30%;margin-left: 550px;">
+            &#9888; {{Session::get('fail')}}
+        </div>
+        @endif
+        <form action="{{route('register-user')}}" method="POST">
         <div class="popup">
             <div class="close-btn">×</div>
             <div class="form">
@@ -33,15 +43,15 @@
                 <h2>Inscription</h2>
                 <div class="form-element">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="mail" placeholder="Entrer votre email" required>
+                    <input type="text" id="email" name="email" placeholder="Entrer votre email" required>
                 </div>
                 <div class="form-element">
                     <label for="username">Nom d'utilisateur</label>
-                    <input type="text" id="username" name="usname" placeholder="Entrer votre nom d'utilisateur" required>
+                    <input type="text" id="username" name="name" placeholder="Entrer votre nom d'utilisateur" required>
                 </div>
                 <div class="form-element">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" name="pw" placeholder="Entrer votre mot de passe" required>
+                    <input type="password" id="password" name="password" placeholder="Entrer votre mot de passe" required>
                 </div>
                 <div class="form-element">
                     <label for="confirm-password">Confirmer le mot de passe</label>
@@ -62,7 +72,7 @@
             </div>
         </div>
     </form>
-    <form action="{{route('login.check')}}" method="POST">
+    <form action="{{ route('login-user') }}" method="POST">
         <div class="popup_login">
             <div class="close-btn">×</div>
             <div class="form">
@@ -70,11 +80,11 @@
                 <h2>Connexion</h2>
                 <div class="form-element">
                     <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Entrer votre email" required>
+                    <input type="text" id="email" name="email" placeholder="Entrer votre email" required>
                 </div>
                 <div class="form-element">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" placeholder="Entrer votre mot de passe" required>
+                    <input type="password" id="password" name="password" placeholder="Entrer votre mot de passe" required>
                 </div>
                 <div class="form-element">
                     <input type="checkbox" id="remember-me">
@@ -171,7 +181,7 @@
             const close_btns = document.querySelectorAll(".close-btn");
 
             inscription_btn.addEventListener("click", function() {
-                document.querySelector(".popup").classList.add("active");
+                document.querySelector(".popup").classList.add("active"); 
             });
             
             login_btn.addEventListener("click", function() {

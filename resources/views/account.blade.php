@@ -24,11 +24,11 @@
         </div>
         <div>
           <label>Nom</label><br/>
-          <input type="text">
+          <input type="text" value="{{$data->name}}">
         </div>
         <div>
           <label>Adresse e-mail</label><br/>
-          <input type="email" placeholder="example@gmail.com">
+          <input type="email" value="{{$data->email}}">
         </div>
         <div>
           <label>Sexe</label><br/>
