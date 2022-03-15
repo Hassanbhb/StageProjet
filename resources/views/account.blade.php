@@ -9,7 +9,13 @@
         </div>
     @endif
   </div>  
-  <form action="post">
+  @if(count($errors)>0)
+  @foreach ($errors->all() as $error )
+  <li>{{error}}</li>
+  @endforeach
+  @endif
+  <form method="post" action="{{ route('update' , $data->id) }}">
+    @csrf
     <div class="formulaire">
       <div class="countainer">
         <img src={{asset("images/user-avatar.svg")}} alt="usericon" class="user_icon"> 
@@ -24,11 +30,11 @@
         </div>
         <div>
           <label>Nom</label><br/>
-          <input type="text" value="{{$data->name}}">
+          <input type="text" name="name" value="{{$data->name}}">
         </div>
         <div>
           <label>Adresse e-mail</label><br/>
-          <input type="email" value="{{$data->email}}">
+          <input type="email" name="email" value="{{$data->email}}">
         </div>
         <div>
           <label>Sexe</label><br/>

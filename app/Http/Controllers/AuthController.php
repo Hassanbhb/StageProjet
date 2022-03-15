@@ -24,6 +24,7 @@ class AuthController extends Controller
         $res = $user->save();
         if($res){
             return back()->with('success','Enregister avec succes');
+            return redirect('profile');
         }else{
             return back()->with('fail','Erreur dans votre registration');
         }
@@ -39,7 +40,7 @@ class AuthController extends Controller
         if ($user){
             if(Hash::check($request->password,$user->password)){
                 $request->session()->put('loginId',$user->id);
-                return redirect('login-in');
+                return redirect('profile');
             }
             else
             {
@@ -57,7 +58,8 @@ class AuthController extends Controller
         if (Session()->has('loginId')) {
            $data = User::where('id', '=', Session()->get('loginId'))->first();
     }
-        return view('account', compact('data'));   
+        return view('account', compact('data')); 
+          
     }
     public function logOut()
     {
@@ -66,4 +68,22 @@ class AuthController extends Controller
             return view('acceuil');
         }
     }
+   public function edit($id)
+   {
+       $data = user::find($id);
+       return view('account', compact('data')); 
+   }
+   public function update(Request $request, $id)
+   {
+       $this->validate($request, [
+        'email'=>'required|email',
+        'name'=>'required',
+       ]);
+       $data = user::find($id);
+       $data->email = $request->get('email');
+       $data->name = $request->get('name');
+       $data->save();
+       return redirect('profile')
+       ->with('success','Information mise à jour!');
+   }
 }

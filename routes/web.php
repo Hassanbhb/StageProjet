@@ -3,6 +3,7 @@
 use App\Http\Controllers\ExperienceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UpdateData;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +33,10 @@ Route::get('/cree', function () {
 });
 Route::post('/register-user',[AuthController::class,'registerUser'])->name('register-user');
 Route::post('/login-user',[AuthController::class,'loginUser'])->name('login-user');
-Route::get('/login-in',[AuthController::class,'loginIn']);
+Route::get('/profile',[AuthController::class,'loginIn']);
 Route::get('/logout',[AuthController::class,'logOut']);
+Route::post('/update/{id}',[AuthController::class,'update'])->name('update');
+
+
 
 
