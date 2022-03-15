@@ -78,10 +78,16 @@ class AuthController extends Controller
        $this->validate($request, [
         'email'=>'required|email',
         'name'=>'required',
+        'secondname'=>'required',
+        'tel'=>'required',
+        'sexe'=>'required',
        ]);
        $data = user::find($id);
        $data->email = $request->get('email');
        $data->name = $request->get('name');
+       $data->secondname = $request->get('secondname');
+       $data->tel = $request->get('tel');
+       $data->sexe = $request->get('sexe');
        $data->save();
        return redirect('profile')
        ->with('success','Information mise à jour!');

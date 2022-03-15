@@ -26,7 +26,7 @@
     <div class="compte">
         <div>
           <label>Prénom</label><br/>
-          <input type="text">
+          <input type="text" name="secondname" value="{{$data->secondname}}">
         </div>
         <div>
           <label>Nom</label><br/>
@@ -38,7 +38,7 @@
         </div>
         <div>
           <label>Sexe</label><br/>
-          <select>
+          <select name="sexe" value="{{$data->sexe}}">
             <option>Homme</option>
             <option>Femme</option>
             <option>Autre</option>
@@ -46,11 +46,11 @@
         </div>
         <div>
           <label>Date de naissance</label><br/>
-          <input type="date">
+          <input type="date" name="date" value="{{$data->date}}">
         </div>
         <div>
           <label>Numéro de telephone</label><br/>
-          <input type="tel" placeholder="(+212)123456789">
+          <input type="tel" placeholder="(+212)123456789" name="tel" value="{{$data->tel}}">
         </div>
   </div>
   <input id="sv_btn" type="submit" value="Enregister">
