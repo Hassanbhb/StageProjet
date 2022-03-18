@@ -26,12 +26,12 @@
             </ul>
         </nav>
         @if(Session::has('success'))
-        <div class="div" style="text-align: center;border: 2px black solid;width: 30%;margin-left: 550px;">
+        <div class="div" style="text-align: center;border: 2px green solid;width: 30%;margin-left: 550px;color:green;">
             &#9888; {{Session::get('success')}}
         </div>
         @endif
         @if(Session::has('fail'))
-        <div class="div" style="text-align: center;border: 2px black solid;width: 30%;margin-left: 550px;">
+        <div class="div" style="text-align: center;border: 2px red solid;width: 30%;margin-left: 550px;color:red;">
             &#9888; {{Session::get('fail')}}
         </div>
         @endif

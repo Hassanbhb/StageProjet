@@ -23,10 +23,10 @@ class AuthController extends Controller
         $user ->password = Hash::make($request->password);
         $res = $user->save();
         if($res){
-            return back()->with('success','Enregister avec succes');
+            return back()->with('success','Enregister avec succès!');
             return redirect('profile');
         }else{
-            return back()->with('fail','Erreur dans votre registration');
+            return back()->with('fail','Erreur lors de votre inscription!');
         }
     }
 
@@ -44,12 +44,12 @@ class AuthController extends Controller
             }
             else
             {
-            return back()->with('fail','mot de passe incorrect'); 
+            return back()->with('fail','Mot de passe non valide!'); 
             }
         }
         else
         {
-            return back()->with('fail','Erreur email non enregistré!');
+            return back()->with('fail','Erreur e-mail non sauvegardée !');
         }
     }
     public function loginIn(Request $request)
