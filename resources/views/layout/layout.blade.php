@@ -18,7 +18,7 @@
           <a href="#">Favoris</a>
           <a href="/voyages/cree">Créer une expériance</a>
           <a href="/account">Compte</a>
-          <a href="#">Déconexion</a>
+          <a href="logout">Déconexion</a>
         </div>
       </div>
     </div>
