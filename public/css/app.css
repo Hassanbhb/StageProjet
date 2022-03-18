@@ -290,9 +290,9 @@ footer {
 .navbar {
     background-color: rgba(200, 200, 200, 0.1);
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -366,9 +366,9 @@ footer {
     padding-top: 40px;
     display: flex;
     -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 .formulaire > p {
     padding-top: 49px;
@@ -539,8 +539,6 @@ textarea {
     border: none;
 }
 
-<<<<<<< HEAD
-=======
 .v_type_list {
     margin: 50px 50px;
 }
@@ -694,7 +692,6 @@ textarea {
     font-weight: 300;
 }
 
->>>>>>> voyagesPage
 * {
     font-family: roboto, sans-serif, serif;
     margin: 0px;
@@ -708,3 +705,4 @@ textarea {
     --white: #f5f5f5;
     --dblue: #2f2e41;
 }
+
