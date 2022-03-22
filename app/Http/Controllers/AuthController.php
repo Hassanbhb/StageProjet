@@ -92,4 +92,5 @@ class AuthController extends Controller
        return redirect('profile')
        ->with('success','Information mise à jour!');
    }
+
 }
