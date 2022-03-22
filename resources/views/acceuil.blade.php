@@ -133,7 +133,11 @@
                         <p class="label">Expériences</p>
                     </div>
                     <div class="card">
-                        <p class="head">3000</p>
+                        <p class="head"><?php
+                            use Illuminate\Support\Facades\DB;
+                            $users = DB::table('users')->count();
+                            echo $users;
+                            ?></p>
                         <p class="label">Utilisateurs</p>
                     </div>
                     <div class="card">
