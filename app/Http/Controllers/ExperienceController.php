@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use App\Models\Experience;
+use App\Models\User;
+use Session;
 
 class ExperienceController extends Controller
 {
@@ -36,4 +37,32 @@ class ExperienceController extends Controller
     {
         return view("cree");
     }
+    public function addExp(Request $request)
+    {
+        $request->validate([
+            'ville' => 'required',
+            'langue' => 'required',
+            'theme' => 'required',
+            'description' => 'required',
+            'duree' => 'required',
+            'titre' => 'required',
+            'prix' => 'required',
+        ]);
+        $experience = new experience();
+        $experience->ville = $request->ville;
+        $experience->langue = $request->langue;
+        $experience->theme = $request->theme;
+        $experience->description = $request->description;
+        $experience->duree = $request->duree;
+        $experience->titre = $request->titre;
+        $experience->prix = $request->prix;
+        $res = $experience->save();
+        if ($res) {
+            return back()->with('success', 'Enregister avec succès!');
+            return redirect('voyages');
+        } else {
+            return back()->with('fail', 'Erreur lors de votre inscription!');
+        }
+    }
+    
 }

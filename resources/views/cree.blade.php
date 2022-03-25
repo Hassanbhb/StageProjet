@@ -1,10 +1,20 @@
 @extends('layout.layout')
 
 @section('content')
-
+@if(Session::has('success'))
+        <div class="div" style="text-align: center;border: 2px green solid;width: 30%;margin-left: 550px;color:green;">
+            &#9888; {{Session::get('success')}}
+        </div>
+ @endif
+@if(Session::has('fail'))
+        <div class="div" style="text-align: center;border: 2px red solid;width: 30%;margin-left: 550px;color:red;">
+            &#9888; {{Session::get('fail')}}
+        </div>
+ @endif
 <h1 class="c_h1">Proposez votre expérience</h1>
 <div class="c_form">
-    <form  action="">
+    <form  method="post" action="{{ route('addExp') }}">
+        @csrf
         <div class="c_f_ville">
             <label for="ville">
                 Dans quelle ville voulez-vous organiser votre expérience?
@@ -179,7 +189,7 @@
         <div class="c_f_area">
             <label for="desc"> Que feront vos participants en votre compagnie ?</label>
             <p>Proposez un programme précis du début a la fin, et non plusieurs idées ou options</p>
-            <textarea name="desc" cols="30" rows="10" placeholder="Expliquez aux participants le déroylement de votre expérience"></textarea>
+            <textarea name="description" cols="30" rows="10" placeholder="Expliquez aux participants le déroylement de votre expérience"></textarea>
         </div>
         
         <div class="c_f_titre">
@@ -195,11 +205,7 @@
             
         </div>
         
-        <div class="c_f_photo">
-            <label for="photo">Ajoutez vos photos <span>5 photos max</span></label>
-            <br>
-            <input type="file" name="photo">
-        </div>
+        
         
         <div class="c_f_prix">
             <div>
@@ -225,7 +231,7 @@
                 <label for="nous">Nourriture</label>
             </div>
         </div>
-        <input id="sb_btn" type="submit" value="Crée l'éxperiance">
+        <input id="sb_btn" type="submit" value="Crée l'éxperiance" style="cursor:pointer;">
     </form>
 </div>
 

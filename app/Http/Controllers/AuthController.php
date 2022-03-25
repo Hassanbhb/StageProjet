@@ -1,14 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use Symfony\Component\Console\Logger\ConsoleLogger;
 use App\Models\User;
 use Session;
 use Illuminate\Support\Facades\Hash;
-
-
 class AuthController extends Controller
 {
     public function registerUser(Request $request)

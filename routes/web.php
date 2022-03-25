@@ -37,3 +37,4 @@ Route::post('/login-user', [AuthController::class, 'loginUser'])->name('login-us
 Route::get('/profile', [AuthController::class, 'loginIn']);
 Route::get('/logout', [AuthController::class, 'logOut']);
 Route::post('/update/{id}', [AuthController::class, 'update'])->name('update');
+Route::post('/user', [ExperienceController::class, 'addExp'])->name('addExp');
