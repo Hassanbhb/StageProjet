@@ -32,8 +32,39 @@ class ExperienceController extends Controller
         return view('details', ['exp' => $exp]);
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        return view("cree");
+
+        $request->validate([
+            'ville' => 'required',
+            'langue' => 'required',
+            'theme' => 'required',
+            'description' => 'required',
+            'duree' => 'required',
+            'titre' => 'required',
+            'prix' => 'required'
+        ]);
+
+        error_log("here");
+        error_log($request);
+
+        $exp = new Experience();
+        $exp->titre = $request->titre;
+        $exp->ville = $request->ville;
+        $exp->description = $request->description;
+        $exp->theme = $request->theme;
+        $exp->duree = $request->duree;
+        $exp->prix = $request->prix;
+        $exp->images = "";
+        $exp->inclus = "";
+
+        $res = $exp->save();
+
+        if ($res) {
+
+            return redirect('voyages');
+        } else {
+            return back()->with('fail', 'Erreur lors de votre creation!');
+        }
     }
 }

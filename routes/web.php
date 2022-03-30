@@ -3,6 +3,7 @@
 use App\Http\Controllers\ExperienceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CreateController;
 use App\Http\Controllers\UpdateData;
 
 /*
@@ -20,10 +21,11 @@ Route::get('/', function () {
     return view('acceuil');
 })->middleware('alreadyLoggedIn');
 
-Route::get('/voyages', [ExperienceController::class, 'index']);
-Route::post('/voyages', [ExperienceController::class, 'filter']);
-Route::get('/voyages/cree', [ExperienceController::class, 'create']);
-Route::get('/voyages/{id}', [ExperienceController::class, 'show']);
+Route::get('/voyages', [ExperienceController::class, 'index'])->middleware('isLoggedIn');
+Route::post('/voyages', [ExperienceController::class, 'filter'])->middleware('isLoggedIn');
+Route::get('/voyages/cree', [CreateController::class, 'display'])->middleware('isLoggedIn');
+Route::post('/voyages/cree', [ExperienceController::class, 'create'])->middleware(('isLoggedIn'));
+Route::get('/voyages/{id}', [ExperienceController::class, 'show'])->middleware('isLoggedIn');
 
 Route::get('/account', function () {
     return view('account');
@@ -34,6 +36,6 @@ Route::get('/cree', function () {
 });
 Route::post('/register-user', [AuthController::class, 'registerUser'])->name('register-user');
 Route::post('/login-user', [AuthController::class, 'loginUser'])->name('login-user');
-Route::get('/profile', [AuthController::class, 'loginIn']);
+Route::get('/profile', [AuthController::class, 'loginIn'])->middleware('isLoggedIn');
 Route::get('/logout', [AuthController::class, 'logOut']);
-Route::post('/update/{id}', [AuthController::class, 'update'])->name('update');
+Route::post('/update/{id}', [AuthController::class, 'update'])->name('update')->middleware('isLoggedIn');

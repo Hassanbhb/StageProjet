@@ -87,10 +87,8 @@ class AuthController extends Controller
 
             $newUserImg = $request->file('userImg');
 
-            //$img_path = $newUserImg->storeAs('public', 'userImage_' . $id . '.' . $newUserImg->extension());
-            $img_path = $newUserImg->store('public');
-            // $data->userImg = $img_path;
-            dd(asset('/storage/' . $img_path));
+            $img_path = $newUserImg->storeAs('/images', 'userImage_' . $id . '.' . $newUserImg->extension(), 'public');
+            $data->userImg = "storage/" . $img_path;
         }
 
 

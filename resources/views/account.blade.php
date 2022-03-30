@@ -10,16 +10,16 @@
     @endif
   </div>  
   @if(count($errors)>0)
-  @foreach ($errors->all() as $error )
-  <li>{{error}}</li>
-  @endforeach
+    @foreach ($errors->all() as $error )
+    <li>{{$error}}</li>
+    @endforeach
   @endif
-  <form method="post" action="{{ route('update' , $data->id) }}">
+  <form method="post" action="{{ route('update' , $data->id) }}" enctype="multipart/form-data">
     @csrf
     <div class="formulaire">
       <div class="countainer">
-        <img src={{asset("images/user-avatar.svg")}} alt="usericon" class="user_icon"> 
-        <input type="file" name="file" id="file" class="inputfile" />
+        <img src={{asset($data->userImg)}} alt="usericon" class="user_icon"> 
+        <input type="file" name="userImg" id="file" class="inputfile" />
         <label for="file"><p style="margin-top: 47px;margin-left: 8px;"><u>Changer photo de profil</u></p></label>
       </div>
     </div>
