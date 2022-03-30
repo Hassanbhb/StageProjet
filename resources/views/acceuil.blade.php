@@ -109,7 +109,7 @@
             <div class="s1">
                 <div>
                     <h1>Crée votre voyage</h1>
-                    <p>Avec Saafr vous pouvez organizer votre experince depuis chez vous, votre annonce est affichée pour les gens du monde et ils peuvent vous rejoindre facilement.</p>
+                    <p>Avec Safir vous pouvez organizer votre experince depuis chez vous, votre annonce est affichée pour les gens du monde et ils peuvent vous rejoindre facilement.</p>
                 </div>
                 <img class="s_svg" src={{ asset('images/tv-tg.svg') }} alt="" srcset="">
             </div>
@@ -117,19 +117,22 @@
                 <img class="s_svg" src= {{ asset('images/camp.svg') }} alt="A girl traveling">
                 <div>
                     <h1>Joindre un voyage</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, facilis mollitia vitae maiores at quasi maxime similique, iste, odio numquam nisi molestiae eius? Quas, fugit provident optio rerum perspiciatis asperiores!</p>
+                    <p>Si vous etes du genre a aimé de joindre les autres et ne pas être le responsable des voyages cette option sera très parfaite pour vous choisissiez entre plusieurs hôtes les plus désirables pour vous et rejoigne l'amusement!</p>
                 </div>
             </div>
         </div>
         <div class="exp">
-            <h1>Les Experiences les plus populaire: </h1>
+            <h1 style="text-align: center;">Les Experiences les plus populaire: </h1>
             <div>
                 <div class="top">
 
                 </div>
                 <div class="stats">
                     <div class="card">
-                        <p class="head">33</p>
+                        <p class="head"><?php
+                            $experiences = DB::table('experiences')->count();
+                            echo $experiences;
+                            ?></p>
                         <p class="label">Expériences</p>
                     </div>
                     <div class="card">

@@ -38,4 +38,5 @@ Route::post('/register-user', [AuthController::class, 'registerUser'])->name('re
 Route::post('/login-user', [AuthController::class, 'loginUser'])->name('login-user');
 Route::get('/profile', [AuthController::class, 'loginIn'])->middleware('isLoggedIn');
 Route::get('/logout', [AuthController::class, 'logOut']);
-Route::post('/update/{id}', [AuthController::class, 'update'])->name('update')->middleware('isLoggedIn');
+Route::post('/update/{id}', [AuthController::class, 'update'])->name('update');
+Route::post('/user', [ExperienceController::class, 'addExp'])->name('addExp');

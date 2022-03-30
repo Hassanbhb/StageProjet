@@ -16,7 +16,7 @@
         <div id="myDropdown" class="dropdown-content">
           <a href="/voyages">Voyages</a>
           <a href="#">Favoris</a>
-          <a href="/voyages/cree">Créer une expériance</a>
+          <a href="/cree">Créer une expériance</a>
           <a href="/profile">Compte</a>
           <a href="logout">Déconexion</a>
         </div>
