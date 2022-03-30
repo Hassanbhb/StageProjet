@@ -21,8 +21,6 @@ class CreateExperienceTable extends Migration
             $table->longText('description');
             $table->string('duree');
             $table->string('titre');
-            $table->json('images');
-            $table->json('inclus');
             $table->integer('prix');
             $table->float('rating');
             $table->timestamps();

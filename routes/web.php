@@ -24,7 +24,6 @@ Route::get('/', function () {
 Route::get('/voyages', [ExperienceController::class, 'index'])->middleware('isLoggedIn');
 Route::post('/voyages', [ExperienceController::class, 'filter'])->middleware('isLoggedIn');
 Route::get('/voyages/cree', [CreateController::class, 'display'])->middleware('isLoggedIn');
-Route::post('/voyages/cree', [ExperienceController::class, 'create'])->middleware(('isLoggedIn'));
 Route::get('/voyages/{id}', [ExperienceController::class, 'show'])->middleware('isLoggedIn');
 
 Route::get('/account', function () {
