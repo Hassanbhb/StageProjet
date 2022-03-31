@@ -22,7 +22,8 @@ class CreateExperienceTable extends Migration
             $table->string('duree');
             $table->string('titre');
             $table->integer('prix');
-            $table->float('rating');
+            $table->string('image')->default('');
+            $table->float('rating')->default('0');
             $table->timestamps();
         });
     }

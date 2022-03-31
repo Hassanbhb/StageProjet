@@ -11,9 +11,14 @@
             &#9888; {{Session::get('fail')}}
         </div>
  @endif
+ @if(count($errors)>0)
+    @foreach ($errors->all() as $error )
+    <li>{{$error}}</li>
+    @endforeach
+  @endif
 <h1 class="c_h1">Proposez votre expérience</h1>
 <div class="c_form">
-    <form  method="post" action="{{ route('addExp') }}">
+    <form  method="post" action="{{ route('addExp') }}" enctype="multipart/form-data" >
         @csrf
         <div class="c_f_ville">
             <label for="ville">
@@ -72,7 +77,11 @@
             
         </div>
         
-        
+        <div class="c_f_photo">
+            <label for="image">Ajoutez vos photos <span>5 photos max</span></label>
+            <br>
+            <input type="file" name="image">
+        </div>
         
         <div class="c_f_prix">
             <div>

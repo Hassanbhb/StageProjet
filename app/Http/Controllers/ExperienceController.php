@@ -43,8 +43,16 @@ class ExperienceController extends Controller
             'duree' => 'required',
             'titre' => 'required',
             'prix' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048'
         ]);
         $experience = new experience();
+
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $exp_img = $file->storeAs('/exp_imgs', 'exp_img_' . time() . '.' . $file->getClientOriginalExtension(), 'public');
+            $experience->image = "storage/" . $exp_img;
+        }
+
         $experience->ville = $request->ville;
         $experience->langue = $request->langue;
         $experience->theme = $request->theme;

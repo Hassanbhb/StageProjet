@@ -22,11 +22,7 @@
     </div>
   </div>
   <div class="detail_imgs">
-    <img src={{ asset('images/la1.jpg') }} alt="images">
-    <img src={{ asset('images/la1.jpg') }} alt="images">
-    <img src={{ asset('images/la1.jpg') }} alt="images">
-    <img src={{ asset('images/la1.jpg') }} alt="images">
-    <img src={{ asset('images/la1.jpg') }} alt="images">
+    <img src={{ asset($exp->image) }} alt="images">
   </div>
   <div class="detail_organiser">
     <p class="section_title" >Expérience organizée par "creator name" </p>
